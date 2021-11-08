@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "empleossapp.ruta.imagenes",
+    "type": "java.lang.String",
+    "description": "A description for 'empleossapp.ruta.imagenes'"
+  },
+  {
+    "name": "db.jdbc.Driver",
+    "type": "java.lang.String",
+    "description": "A description for 'db.jdbc.Driver'"
+  },
+  {
+    "name": "/spring.datasource.driver-class-name",
+    "type": "java.lang.String",
+    "description": "A description for '/spring.datasource.driver-class-name'"
+  },
+  {
+    "name": "/spring.datasource.driver-class-name",
+    "type": "java.lang.String",
+    "description": "A description for '/spring.datasource.driver-class-name'"
+  }
+]}

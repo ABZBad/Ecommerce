@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>EmpleosApp | Creación de Categorías</title>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link th:href="@{/bootstrap/css/jumbotron.css}" rel="stylesheet">
+    <link th:href="@{/bootstrap/css/sticky-footer-navbar.css}" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header th:insert="fragmentos/menu.html::menu-principal">	
+    </header>
+    <main role="main">     
+      <hr>
+      <div class="container"> 
+
+        <div class="card">
+          <h4 class="card-header"><strong>Datos del Perfil</strong></h4>              
+          <div class="card-body">
+            <form method="post" th:action="@{/perfiles/guardar}"
+            	th:object="${per}">              
+              <div class="row">
+                <div class="col-md-6"> 
+                  <div class="form-group">
+                  <input type="hidden" th:field="*{id}">
+                    <label for="nombre">Nombre Perfil</label>
+                    <input type="text" class="form-control" id="perfil" th:field="*{per}" name="perfil" placeholder="Escriba el nombre del perfil" required="required">
+                  </div>
+                </div>                
+              </div> 
+                          
+              <hr>
+              <button type="submit" title="Guardar el registro." class="btn btn-secondary text-white">Guardar</button>  
+            </form>
+          </div>
+        </div>
+      </div> <!-- /container -->
+
+    </main>
+
+   <footer class="footer" th:insert="fragmentos/pie.html::pie-pagina">
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>     
+  </body>
+</html>
